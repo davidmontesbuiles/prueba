@@ -89,10 +89,10 @@ include_once('../models/consultas.php');
                             <div class="field_wrapper">
                                 <div class="row">
                                     <div class="col-lg-5">
-                                        <input type="date" class="form-control" id="field_date[]" name="field_date">
+                                        <input type="date" class="form-control" id="field_date" name="field_date[]">
                                     </div>
                                     <div class="col-lg-5">
-                                        <input type="number" class="form-control" min="0" max="8" placeholder="Horas" id="field_horas[]" name="field_horas">
+                                        <input type="number" class="form-control" min="0" max="8" placeholder="Horas" id="field_horas" name="field_horas[]">
                                     </div>
                                     <div class="col-lg-2">
                                         <a href="javascript:void(0);" class="add_button" title="Añadir campo"><img src="../images/mas.png" alt="mas"></a>
@@ -144,7 +144,7 @@ include_once('../models/consultas.php');
             var maxField = 8;
             var addButton = $('.add_button');
             var wrapper = $('.field_wrapper');
-            var fieldHTML = '<div class="row"><div class="col-lg-5"><input type="date" class="form-control" name="field_date"></div><div class="col-lg-5"><input type="number" class="form-control" placeholder="Horas" min="0" max="8" name="field_horas"></div><div class="col-lg-2"><a href="javascript:void(0);" class="remove_button" title="Añadir campo"><img src="../images/menos.png" alt="menos"></a></div></div><br>';
+            var fieldHTML = '<div class="row ell"><div class="col-lg-5"><input type="date" class="form-control" name="field_date[]"></div><div class="col-lg-5"><input type="number" class="form-control" placeholder="Horas" min="0" max="8" name="field_horas[]"></div><div class="col-lg-2"><a href="javascript:void(0);" class="remove_button" title="Eliminar campo"><img src="../images/menos.png" alt="menos"></a></div></div><br>';
             var x = 1;
             $(addButton).click(function(){
                 if(x < maxField){
