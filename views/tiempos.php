@@ -144,7 +144,7 @@ include_once('../models/consultas.php');
             var maxField = 8;
             var addButton = $('.add_button');
             var wrapper = $('.field_wrapper');
-            var fieldHTML = '<div class="row ell"><div class="col-lg-5"><input type="date" class="form-control" name="field_date[]"></div><div class="col-lg-5"><input type="number" class="form-control" placeholder="Horas" min="0" max="8" name="field_horas[]"></div><div class="col-lg-2"><a href="javascript:void(0);" class="remove_button" title="Eliminar campo"><img src="../images/menos.png" alt="menos"></a></div></div><br>';
+            var fieldHTML = '<div><div class="row"><div class="col-lg-5"><input type="date" class="form-control" name="field_date[]"></div><div class="col-lg-5"><input type="number" class="form-control" placeholder="Horas" min="0" max="8" name="field_horas[]"></div><a href="javascript:void(0);" class="remove_button" title="Eliminar campo"><img src="../images/menos.png" alt="menos"></a></div><br></div>';
             var x = 1;
             $(addButton).click(function(){
                 if(x < maxField){
