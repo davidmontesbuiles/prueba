@@ -13,6 +13,37 @@ $("#tiempo").click(function() {
     let f = document.getElementsByName("field_date[]")[0].value;
     let h = document.getElementsByName("field_horas[]")[0].value;
 
+    var h1 = 0;
+    var h2 = 0;
+    var h3 = 0;
+    var h4 = 0;
+    var h5 = 0;
+    var h6 = 0;
+    var h7 = 0;
+    if (horas > '1') {
+        var h1 = document.getElementsByName("field_horas[]")[1].value;
+    }
+    if (horas > '2') {
+        var h2 = document.getElementsByName("field_horas[]")[2].value;
+    }
+    if (horas > '3') {
+        var h3 = document.getElementsByName("field_horas[]")[3].value;
+    }
+    if (horas > '4') {
+        var h4 = document.getElementsByName("field_horas[]")[4].value;
+    }
+    if (horas > '5') {
+        var h5 = document.getElementsByName("field_horas[]")[5].value;
+    }
+    if (horas > '6') {
+        var h6 = document.getElementsByName("field_horas[]")[6].value;
+    }
+    if (horas > '7') {
+        var h7 = document.getElementsByName("field_horas[]")[7].value;
+    }
+
+    var suma = parseFloat(h) + parseFloat(h1) + parseFloat(h2) + parseFloat(h3) + parseFloat(h4) + parseFloat(h5) + parseFloat(h6) + parseFloat(h7);
+
     if (nombre.length == 0) {
         $("#camp2").show();
         $("#camp2").html("Debe llenar todos los campos.");
@@ -24,6 +55,10 @@ $("#tiempo").click(function() {
     } else if (h.length == 0) {
         $("#camp2").show();
         $("#camp2").html("Llena almenos una hora.");
+        $("#camp2").delay(3000).hide(0);
+    } else if (suma > 8) {
+        $("#camp2").show();
+        $("#camp2").html("No puedes agregar mas de 8 horas a esta actividad.");
         $("#camp2").delay(3000).hide(0);
     } else {
         for (var i = 0; i < fechas; i++) {
