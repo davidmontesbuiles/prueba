@@ -90,6 +90,11 @@ $("#tiempo").click(function() {
                         $("#err2").show();
                         $("#err2").html("El nombre de la actividad no existe");
                         $("#err2").delay(3000).hide(0);
+                    } else if (res != "1" && res != "0") {
+                        $("#resp2").hide();
+                        $("#err2").show();
+                        $("#err2").html(res);
+                        $("#err2").delay(3000).hide(0);
                     }
                 })
                 .fail(function() {
