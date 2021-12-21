@@ -83,7 +83,11 @@ include_once('../models/consultas.php');
                         </div>
                         <div class="modal-body">
                             <div class="col-lg-12">
-                                <input type="text" placeholder="Nombre de la actividad" class="form-control" id="name" name="name">
+                                <select class="form-control form-control-lg" id="name" name="name">
+                                    <option value="">Seleccione la actividad</option>
+                                    <?= consultas::cargar_act_selec() ?>
+                                </select>
+
                             </div>
                             <br>
                             <div class="field_wrapper">
@@ -144,11 +148,7 @@ include_once('../models/consultas.php');
             var maxField = 8;
             var addButton = $('.add_button');
             var wrapper = $('.field_wrapper');
-<<<<<<< HEAD
             var fieldHTML = '<div class="row ell" id="remove_" ><div class="col-lg-5"><input type="date" class="form-control" name="field_date[]"></div><div class="col-lg-5"><input type="number" class="form-control" placeholder="Horas" min="0" max="8" name="field_horas[]"></div><div class="col-lg-2"><a href="javascript:void(0);" class="remove_button" title="Eliminar campo"><img src="../images/menos.png" alt="menos"></a></div></div><div id="re_" style="margin-top: 4%;"></div>';
-=======
-            var fieldHTML = '<div><div class="row"><div class="col-lg-5"><input type="date" class="form-control" name="field_date[]"></div><div class="col-lg-5"><input type="number" class="form-control" placeholder="Horas" min="0" max="8" name="field_horas[]"></div><a href="javascript:void(0);" class="remove_button" title="Eliminar campo"><img src="../images/menos.png" alt="menos"></a></div><br></div>';
->>>>>>> 21fd46fb357b3233a075dcb4ced7e0ed7c89a444
             var x = 1;
             $(addButton).click(function(){
                 if(x < maxField){
